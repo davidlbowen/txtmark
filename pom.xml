@@ -9,11 +9,11 @@
   </parent>
 
   <groupId>com.github.rjeschke</groupId>
-  <artifactId>txtmark</artifactId>
-  <version>0.14-SNAPSHOT</version>
+  <artifactId>zendesk-txtmark</artifactId>
+  <version>0.1</version>
   <name>txtmark</name>
   <description>Markdown parser for the JVM</description>
-  <url>https://github.com/rjeschke/txtmark</url>
+  <url>https://github.com/davidlbowen/txtmark</url>
   <packaging>jar</packaging>
   
   <licenses>
@@ -29,9 +29,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:git@github.com/rjeschke/txtmark.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/rjeschke/txtmark.git</developerConnection>
-    <url>git@github.com/rjeschke/txtmark.git</url>
+    <connection>scm:git:git@github.com/davidlbowen/txtmark.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/davidlbowen/txtmark.git</developerConnection>
+    <url>git@github.com/davidlbowen/txtmark.git</url>
   </scm>
 
   <developers>
