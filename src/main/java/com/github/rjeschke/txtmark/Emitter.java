@@ -279,7 +279,7 @@ class Emitter
             }
             link = temp.toString();
 
-            if (in.charAt(pos) == ' ')
+            if (pos < in.length() && in.charAt(pos) == ' ')
             {
                 pos = Utils.skipSpaces(in, pos);
                 if (pos > start && in.charAt(pos) == '"')
@@ -294,13 +294,12 @@ class Emitter
                     comment = temp.toString();
                     pos++;
                     pos = Utils.skipSpaces(in, pos);
-                    if (pos == -1)
-                    {
-                        return -1;
-                    }
                 }
             }
-            if (in.charAt(pos) != ')')
+            if (pos == -1) {
+                return -1;
+            }
+            if (pos < in.length() && in.charAt(pos) != ')')
             {
                 return -1;
             }

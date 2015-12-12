@@ -103,8 +103,13 @@ class Block
             {
                 end--;
             }
-            line.value = line.value.substring(start, end + 1);
-            line.leading = line.trailing = 0;
+            if (start > end) {
+                line.setEmpty();
+            }
+            else {
+                line.value = line.value.substring(start, end + 1);
+                line.leading = line.trailing = 0;
+            }
         }
         this.hlDepth = Math.min(level, 6);
     }

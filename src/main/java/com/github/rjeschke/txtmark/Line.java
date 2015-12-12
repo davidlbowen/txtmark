@@ -384,7 +384,7 @@ class Line
         Line line = firstLine;
         if (start + 3 < line.value.length())
         {
-            if (line.value.charAt(2) == '-' && line.value.charAt(3) == '-')
+            if (line.value.charAt(start + 2) == '-' && line.value.charAt(start + 3) == '-')
             {
                 int pos = start + 4;
                 while (line != null)
@@ -517,7 +517,7 @@ class Line
         final LinkedList<String> tags = new LinkedList<String>();
         final StringBuilder temp = new StringBuilder();
         int pos = this.leading;
-        if (this.value.charAt(this.leading + 1) == '!')
+        if (this.leading + 1 < this.value.length() && this.value.charAt(this.leading + 1) == '!')
         {
             if (this.readXMLComment(this, this.leading) > 0)
             {

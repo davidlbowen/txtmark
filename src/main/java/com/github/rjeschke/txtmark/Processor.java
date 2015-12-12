@@ -665,17 +665,18 @@ public class Processor
                     if (line.value.charAt(line.pos + 1) == ':')
                     {
                         line.pos += 2;
-                        line.skipSpaces();
-                        // Check for link syntax
-                        if (line.value.charAt(line.pos) == '<')
-                        {
-                            line.pos++;
-                            link = line.readUntil('>');
-                            line.pos++;
-                        }
-                        else
-                        {
-                            link = line.readUntil(' ', '\n');
+                        if (line.skipSpaces()) {
+                            // Check for link syntax
+                            if (line.value.charAt(line.pos) == '<')
+                            {
+                                line.pos++;
+                                link = line.readUntil('>');
+                                line.pos++;
+                            }
+                            else
+                            {
+                                link = line.readUntil(' ', '\n');
+                            }
                         }
 
                         // Is link valid?
